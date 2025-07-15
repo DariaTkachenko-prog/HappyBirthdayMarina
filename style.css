@@ -19,7 +19,7 @@ body {
 
 /* === Заголовок === */
 h1 {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   text-align: center;
   line-height: 1.2;
   max-width: 800px;
@@ -33,18 +33,34 @@ h1 {
   transform: translateY(10px);
   animation: fadeInUp 0.8s ease forwards;
   color: #4B0082;
-  font-size: 2.4rem;
+  font-size: 2.3rem;
   font-weight: 700;
   letter-spacing: 0.5px;
-}
-.emoji {
-  display: block;
-  font-size: 2rem;
-  margin-top: 5px;
-  animation: popIn 0.6s ease-out forwards;
+  margin-bottom: 10px;
 }
 
-/* Анимация для плавного появления */
+.h1-line.line2 {
+  animation-delay: 0.3s;
+  font-size: 1.8rem;
+  line-height: 1.3;
+}
+
+.emoji-inline {
+  display: inline;
+  font-size: 2.2rem;
+  margin-left: 10px;
+  animation: popIn 0.6s ease-out forwards;
+  vertical-align: middle;
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes popIn {
   0% {
     opacity: 0;
@@ -53,17 +69,6 @@ h1 {
   100% {
     opacity: 1;
     transform: scale(1) rotate(0deg);
-  }
-}
-
-.h1-line.line2 {
-  animation-delay: 0.3s;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -142,11 +147,10 @@ h1 {
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* чтобы низ прижимался */
+  justify-content: space-between;
   max-width: 600px;
   min-width: 250px;
 }
-
 
 .congrats-text p {
   display: flex;
@@ -160,7 +164,6 @@ h1 {
   font-weight: 600;
   text-align: left;
 }
-
 
 .signature {
   display: block;
@@ -189,11 +192,19 @@ h1 {
   display: none !important;
 }
 
-/* === Адаптив (планшет и ниже) === */
+/* === Адаптив (планшет) === */
 @media screen and (max-width: 768px) {
   .h1-line {
-    font-size: 1.8rem;
-    padding: 0 10px;
+    font-size: 1.6rem;
+  }
+
+  .h1-line.line2 {
+    font-size: 1.3rem;
+  }
+
+  .emoji-inline {
+    font-size: 1.6rem;
+    margin-left: 6px;
   }
 
   .congrats-wrapper {
@@ -203,9 +214,7 @@ h1 {
   }
 
   .congrats-text p {
-    font-size: 0.8rem;
-    line-height: 1.4;
-    max-width: 90%;
+    font-size: 0.95rem;
     text-align: center;
   }
 
@@ -229,14 +238,21 @@ h1 {
 /* === Адаптив (телефоны) === */
 @media screen and (max-width: 400px) {
   .h1-line {
+    font-size: 1.3rem;
+  }
+
+  .h1-line.line2 {
     font-size: 1.1rem;
   }
 
+  .emoji-inline {
+    font-size: 1.3rem;
+    margin-left: 5px;
+  }
+
   .congrats-text p {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     padding: 0 10px;
-    max-width: 100%;
-    line-height: 1.4;
   }
 
   .card {
@@ -253,12 +269,3 @@ h1 {
     width: 160px;
   }
 }
-
-.emoji-inline {
-  display: inline;
-  font-size: 2rem;
-  margin-left: 8px;
-  animation: popIn 0.6s ease-out forwards;
-  vertical-align: middle;
-}
-
