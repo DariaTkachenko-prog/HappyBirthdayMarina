@@ -187,11 +187,11 @@ h1 {
 /* === Адаптив (телефоны) === */
 @media screen and (max-width: 400px) {
   .h1-line {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 
   .congrats-text p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     padding: 0 10px;
   }
 
