@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Вітаємо, з Днем народження!</title>
 
-
   <!-- ✅ Open Graph (Facebook, Telegram) -->
   <meta property="og:title" content="🎁 Перейди за посиланням" />
   <meta property="og:image" content="https://dariatkachenko-prog.github.io/HappyBirthdayMarina/preview.jpg" />
@@ -14,6 +13,7 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:url" content="https://dariatkachenko-prog.github.io/HappyBirthdayMarina/" />
   <meta property="og:type" content="website" />
+  
   <!-- ✅ Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="🎁 Перейди за посиланням" />
@@ -25,21 +25,17 @@
 
 <body>
   <div class="card">
- <h1>
-  <span class="h1-line line1">
-    МАРИНА <span class="emoji-inline">🎉</span>
-  </span>
-  <span class="h1-line line2">ВІТАЄМО ТЕБЕ З ДНЕМ НАРОДЖЕННЯ!</span>
-</h1>
+    <h1>
+      <span class="h1-line line1">
+        МАРИНА <span class="emoji-inline">🎉</span>
+      </span>
+      <span class="h1-line line2">ВІТАЄМО ТЕБЕ З ДНЕМ НАРОДЖЕННЯ!</span>
+    </h1>
 
-
-
-
-   <div class="gift-container">
-  <img src="gift.png" alt="Подарунок" id="gift" />
-  <span class="click-text">Натисни 👆<br>на подарунок</span>
-</div>
-
+    <div class="gift-container">
+      <img src="gift.png" alt="Подарунок" id="gift" />
+      <span class="click-text">Натисни 👆<br>на подарунок</span>
+    </div>
 
     <div class="congrats-wrapper hidden">
       <div class="congrats-text">
@@ -79,7 +75,10 @@
           gift.classList.add("opened");
 
           if (clickText) clickText.remove();
+
+          // ✨ Показываем с анимацией
           congratsWrapper.classList.remove("hidden");
+          congratsWrapper.classList.add("fade-in");
 
           bgMusic.play();
         }, 800);
@@ -88,4 +87,3 @@
   </script>
 </body>
 </html>
-
