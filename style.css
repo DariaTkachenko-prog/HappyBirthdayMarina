@@ -53,7 +53,7 @@ h1 {
 .gift-container {
   position: relative;
   display: inline-block;
-  margin: 40px 0 40px 0;
+  margin: 40px 0 20px 0;
 }
 
 #gift {
@@ -115,7 +115,7 @@ h1 {
   align-items: center;
   gap: 30px;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 0 15px;
 }
 
