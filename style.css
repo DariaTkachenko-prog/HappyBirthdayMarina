@@ -10,7 +10,7 @@ body {
 }
 
 .card {
-  margin: 60px auto;
+  margin: 40px auto; /* Было 60px — подняли */
   padding: 20px;
   max-width: 900px;
   width: 95%;
@@ -19,7 +19,7 @@ body {
 
 /* === Заголовок === */
 h1 {
-  margin-bottom: 40px;
+  margin-bottom: 30px; /* Было 40px — чуть выше */
   text-align: center;
   line-height: 1.2;
   max-width: 800px;
@@ -159,7 +159,7 @@ h1 {
   height: 100%;
   margin: 0;
   font-size: 1.3rem;
-  line-height: 1.4;
+  line-height: 1.25; /* Было 1.4 — уменьшили междустрочный интервал */
   color: #4B0082;
   font-weight: 600;
   text-align: left;
@@ -168,7 +168,7 @@ h1 {
 .signature {
   display: block;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1rem; /* Было 1.1rem — уменьшили */
   color: #4B0082;
   font-style: italic;
   margin-top: 20px;
@@ -178,6 +178,7 @@ h1 {
   flex-shrink: 0;
   display: flex;
   align-items: stretch;
+  justify-content: center; /* Центрируем фото на мобилках */
 }
 
 .congrats-photo img {
@@ -215,11 +216,12 @@ h1 {
 
   .congrats-text p {
     font-size: 0.95rem;
+    line-height: 1.3; /* Уточнено */
     text-align: center;
   }
 
   .signature {
-    font-size: 1rem;
+    font-size: 0.9rem; /* Тоже уменьшили */
   }
 
   #gift {
@@ -252,7 +254,12 @@ h1 {
 
   .congrats-text p {
     font-size: 0.85rem;
+    line-height: 1.25;
     padding: 0 10px;
+  }
+
+  .signature {
+    font-size: 0.85rem;
   }
 
   .card {
