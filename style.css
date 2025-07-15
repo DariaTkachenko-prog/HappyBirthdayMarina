@@ -222,9 +222,11 @@ h1 {
     text-align: center;
   }
 
-  .signature {
-    font-size: 0.9rem;
-  }
+.signature {
+  font-size: 0.9rem;
+  margin-top: 10px; 
+}
+
 
   .congrats-photo {
     justify-content: center;
@@ -265,9 +267,13 @@ h1 {
     padding: 0 10px;
   }
 
+ @media screen and (max-width: 400px) {
   .signature {
     font-size: 0.85rem;
+    margin-top: 8px; /* Можно ещё чуть ближе */
   }
+}
+
 
   .card {
     padding: 15px;
