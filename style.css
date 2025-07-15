@@ -60,7 +60,7 @@ h1 {
   width: 260px;
   cursor: pointer;
   transition: transform 0.5s ease;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 #gift:hover {
