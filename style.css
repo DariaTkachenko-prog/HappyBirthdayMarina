@@ -196,10 +196,7 @@ h1 {
 }
 
 /* === Адаптив (планшет) === */
-@media screen and (max-width: 768px) {
-  .h1-line {
-    font-size: 1.6rem;
-  }
+
 
   .h1-line.line2 {
     font-size: 1.3rem;
