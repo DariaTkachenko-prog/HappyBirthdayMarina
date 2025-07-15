@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const clickText = document.querySelector(".click-text");
   const congratsWrapper = document.querySelector(".congrats-wrapper");
 
-  
   gift.addEventListener("click", () => {
     // Воспроизводим звук открытия сразу
     openSound.play();
@@ -20,10 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (clickText) clickText.remove();
       congratsWrapper.classList.remove("hidden");
+      congratsWrapper.classList.add("slide-down"); // ✅ добавили анимацию сверху вниз
 
       // Фоновая музыка запускается только сейчас
       bgMusic.play();
     }, 800);
   });
 });
+
 
