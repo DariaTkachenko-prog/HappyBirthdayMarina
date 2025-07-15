@@ -245,16 +245,16 @@ h1 {
 /* === Адаптив (телефоны) === */
 @media screen and (max-width: 400px) {
   .h1-line {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 6px; /* расстояние между текстом и emoji */
+    gap: 3px; /* расстояние между текстом и emoji */
   }
 
   .h1-line.line2 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-top: -5px;
   }
 
