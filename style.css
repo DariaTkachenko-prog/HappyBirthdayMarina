@@ -10,7 +10,7 @@ body {
 }
 
 .card {
-  margin: 40px auto; /* Было 60px — подняли */
+  margin: 20px auto; /* Было 60px — подняли */
   padding: 20px;
   max-width: 900px;
   width: 95%;
@@ -276,7 +276,7 @@ h1 {
 
 
   .card {
-    padding: 15px;
+    padding: 10px;
   }
 
   .click-text {
