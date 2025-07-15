@@ -10,7 +10,7 @@ body {
 }
 
 .card {
-  margin: 20px auto; /* Было 60px — подняли */
+  margin: 20px auto;
   padding: 20px;
   max-width: 900px;
   width: 95%;
@@ -19,7 +19,7 @@ body {
 
 /* === Заголовок === */
 h1 {
-  margin-bottom: 30px; /* Было 40px — чуть выше */
+  margin-bottom: 30px;
   text-align: center;
   line-height: 1.2;
   max-width: 800px;
@@ -46,11 +46,12 @@ h1 {
 }
 
 .emoji-inline {
-  display: inline;
+  display: inline-block;
   font-size: 2.2rem;
   margin-left: 10px;
   animation: popIn 0.6s ease-out forwards;
   vertical-align: middle;
+  transform: translateY(3px); /* Добавили, чтобы иконка была по линии с текстом */
 }
 
 /* Анимации */
@@ -137,7 +138,7 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
-  gap: 15px; /* Было 30px — уменьшили отступ между текстом и фото */
+  gap: 15px;
   max-width: 1000px;
   margin: 10px auto 0;
   padding: 0 5px;
@@ -159,7 +160,7 @@ h1 {
   height: 100%;
   margin: 0;
   font-size: 1.3rem;
-  line-height: 1.25; /* Было 1.4 — уменьшили междустрочный интервал */
+  line-height: 1.25;
   color: #4B0082;
   font-weight: 600;
   text-align: left;
@@ -168,17 +169,17 @@ h1 {
 .signature {
   display: block;
   font-weight: 700;
-  font-size: 1rem; /* Было 1.1rem — уменьшили */
+  font-size: 1rem;
   color: #4B0082;
   font-style: italic;
-  margin-top: 20px;
+  margin-top: 20px; /* По умолчанию — не меняем */
 }
 
 .congrats-photo {
   flex-shrink: 0;
   display: flex;
   align-items: stretch;
-  justify-content: center; /* Центрирование */
+  justify-content: center;
 }
 
 .congrats-photo img {
@@ -186,7 +187,7 @@ h1 {
   width: 100%;
   height: auto;
   object-fit: contain;
-  margin: 0 auto; /* Центрируем изображение */
+  margin: 0 auto;
   display: block;
 }
 
@@ -195,9 +196,8 @@ h1 {
   display: none !important;
 }
 
-/* === Адаптив (планшет) === */
-
-
+/* === Адаптив (планшет и телефоны) === */
+@media screen and (max-width: 768px) {
   .h1-line.line2 {
     font-size: 1.3rem;
   }
@@ -205,11 +205,12 @@ h1 {
   .emoji-inline {
     font-size: 1.6rem;
     margin-left: 6px;
+    transform: translateY(2px); /* Чуть ниже иконка */
   }
 
   .congrats-wrapper {
     flex-direction: column;
-    gap: 10px; /* Было 20px — уменьшили и здесь */
+    gap: 10px;
     text-align: center;
   }
 
@@ -219,11 +220,10 @@ h1 {
     text-align: center;
   }
 
-.signature {
-  font-size: 0.9rem;
-  margin-top: 10px; 
-}
-
+  .signature {
+    font-size: 0.9rem;
+    margin-top: 4px !important; /* Подняли только для планшетов */
+  }
 
   .congrats-photo {
     justify-content: center;
@@ -243,7 +243,6 @@ h1 {
   }
 }
 
-/* === Адаптив (телефоны) === */
 @media screen and (max-width: 400px) {
   .h1-line {
     font-size: 1.3rem;
@@ -256,6 +255,7 @@ h1 {
   .emoji-inline {
     font-size: 1.3rem;
     margin-left: 5px;
+    transform: translateY(2px);
   }
 
   .congrats-text p {
@@ -264,13 +264,10 @@ h1 {
     padding: 0 10px;
   }
 
- @media screen and (max-width: 400px) {
   .signature {
     font-size: 0.85rem;
-    margin-top: 8px; /* Можно ещё чуть ближе */
+    margin-top: 4px !important; /* Тоже подняли ближе к тексту */
   }
-}
-
 
   .card {
     padding: 10px;
@@ -284,20 +281,5 @@ h1 {
 
   #gift {
     width: 160px;
-  }
-}
-
-
-@media screen and (max-width: 768px) {
-  .signature {
-    font-size: 0.9rem;
-    margin-top: 10px !important;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .signature {
-    font-size: 0.85rem;
-    margin-top: 8px !important;
   }
 }
