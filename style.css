@@ -293,7 +293,18 @@ h1 {
   }
 }
 
-.fade-in {
-  animation: fadeInUp 1s ease forwards;
+@keyframes slideFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-down {
+  animation: slideFadeDown 0.9s ease forwards;
 }
 
