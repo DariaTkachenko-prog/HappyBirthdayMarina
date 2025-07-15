@@ -293,4 +293,7 @@ h1 {
   }
 }
 
+.fade-in {
+  animation: fadeInUp 1s ease forwards;
+}
 
