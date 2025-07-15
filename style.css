@@ -164,7 +164,9 @@ h1 {
 
 /* === Скрытый блок === */
 .hidden {
-  display: none;
+  display: none !important;
+}
+
 }
 
 /* === Адаптив (планшет и ниже) === */
