@@ -123,11 +123,12 @@ h1 {
 }
 
 .congrats-text {
+  flex: 1 1 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: stretch;
   max-width: 600px;
-  width: 100%;
+  min-width: 250px;
   text-align: left;
 }
 
@@ -136,32 +137,34 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
 }
 
 .congrats-text p {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   font-size: 1.3rem;
   line-height: 1.7;
   color: #4B0082;
   font-weight: 600;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  margin: 0;
 }
 
 .signature {
   display: block;
-  margin-top: 25px;
   font-weight: 700;
   font-size: 1.1rem;
   color: #4B0082;
   font-style: italic;
-  align-self: flex-end;
+  margin-top: 25px;
+  margin-bottom: 0;
 }
 
 .congrats-photo {
-  display: flex;
-  align-items: stretch;
+  flex-shrink: 0;
 }
 
 .congrats-photo img {
