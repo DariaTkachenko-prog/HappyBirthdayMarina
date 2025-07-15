@@ -112,7 +112,7 @@ h1 {
 .congrats-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   gap: 30px;
   flex-wrap: wrap;
   margin-top: 10px;
@@ -122,14 +122,31 @@ h1 {
   margin-right: auto;
 }
 
+.congrats-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
+}
+
+.congrats-text-inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .congrats-text p {
   font-size: 1.3rem;
   line-height: 1.7;
   color: #4B0082;
   font-weight: 600;
-  max-width: 600px;
-  width: 100%;
-  text-align: left;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .signature {
@@ -139,13 +156,22 @@ h1 {
   font-size: 1.1rem;
   color: #4B0082;
   font-style: italic;
+  align-self: flex-end;
+}
+
+.congrats-photo {
+  display: flex;
+  align-items: stretch;
 }
 
 .congrats-photo img {
   max-width: 300px;
   width: 100%;
   height: auto;
+  border-radius: 15px;
+  object-fit: cover;
 }
+
 
 /* === Скрытый блок === */
 .hidden {
