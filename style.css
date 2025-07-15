@@ -124,7 +124,7 @@ h1 {
   line-height: 1.7;
   color: #4B0082;
   font-weight: 600;
-  max-width: 400px;
+  max-width: 500px;
   text-align: left;
 }
 
@@ -193,6 +193,7 @@ h1 {
   .congrats-text p {
     font-size: 0.8rem;
     padding: 0 10px;
+    max-width: 100%; 
   }
 
   .card {
