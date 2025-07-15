@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const clickText = document.querySelector(".click-text");
   const congratsWrapper = document.querySelector(".congrats-wrapper");
 
+  
   gift.addEventListener("click", () => {
     // Воспроизводим звук открытия сразу
     openSound.play();
